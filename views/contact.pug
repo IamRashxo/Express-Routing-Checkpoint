@@ -1,0 +1,30 @@
+extend layout
+
+block content 
+
+    .contact
+        h1 Contact Us
+        p
+            | Feel free to get in touch with us for any inquiries or collaboration opportunities.
+
+        // Add a contact form
+        form(action="/submit-contact" method="post")
+        label(for="name") Name:
+        input(type="text" name="name" required)
+
+        label(for="email") Email:
+        input(type="email" name="email" required)
+
+        label(for="message") Message:
+        textarea(name="message" required)
+
+        button(type="submit") Submit
+
+        // Add a Google Map
+        .map-container
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-73.987654!3d40.748817!2m1!1e3!3m4!1s0x0:0x0!8m2!3d40.748817!4d-73.987654", width="600", height="450", style="border:0;", allowfullscreen="", loading="lazy")
+
+        p
+            |looking forward to hearing from you
+
+    // Add more content specific to the contact page if needed
